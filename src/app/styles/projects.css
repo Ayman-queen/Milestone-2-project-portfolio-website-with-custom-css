@@ -1,0 +1,128 @@
+/* General Project Section Styles */
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.portfolio-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.portfolio-description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-out 0.5s;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Project Card Styling */
+.project-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0; /* Initially invisible */
+  transform: translateY(50px); /* Initially positioned below */
+}
+
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0); /* Move to original position */
+}
+
+/* Icon Styling */
+.project-icon {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Project Title & Description */
+.project-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Interactive Features */
+.interactive-features h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.interactive-features p {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Project Link */
+.project-link {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #0056b3;
+}
+
+/* Swiper Styles */
+.project-carousel {
+  margin-top: 20px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  opacity: 0; /* Initial state is invisible */
+  transform: translateY(30px); /* Start slightly down */
+  transition: opacity 0.6s, transform 0.6s ease-out;
+}
+
+.project-image.show {
+  opacity: 1;
+  transform: translateY(0); /* Move to original position */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,38 @@
+/* Header styles */
+.header-container {
+    background: linear-gradient(135deg, #6b46c1, #805ad5); /* Gradient background */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .header-link {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .header-link:hover {
+    color: #ffd700; /* Hover color */
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+  
+  .header-link:active {
+    color: #ff6347; /* Active link color */
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .header-nav {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }  
